@@ -1,0 +1,65 @@
+/* Basic reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to   
+ bottom right, #f0f0f0, #e0e0e0); 
+    color: #020000;
+}
+
+header {
+    background-color: #333; /* Darker header for contrast */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Gallery layout using CSS Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* Lift slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent item sizes */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.item-name, .item-price {
+    padding: 10px;
+    text-align: center;
+}
+
+.item-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.item-price {
+    font-size: 1em;
+    color: #000000;
+}

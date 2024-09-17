@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Grocery Store</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <h1>Online Grocery Store</h1>
+        <div id="cart">
+            <span>Cart: <span id="cart-count">0</span> items</span>
+            <a href="#" onclick="showCart()">View Cart</a>
+        </div>
+    </header>
+
+    <main> 
+        <article class="item">
+            <img src="apple.jpg" alt="A crisp red apple" height="200"> 
+            <h2>Apple</h2>
+            <p>Rs.150</p>
+            <div class="quantity">
+                <label for="appleQty">Quantity:</label>
+                <input type="number" id="appleQty" value="1" min="1">
+            </div>
+            <button onclick="addToCart('Apple', 150, document.getElementById('appleQty').value)">Add to Cart</button>
+        </article>
+
+        <article class="item">
+            <img src="banana.jpg" alt="A bunch of yellow bananas" height="200"> 
+            <h2>Banana</h2>
+            <p>Rs.40</p>
+            <div class="quantity">
+                <label for="bananaQty">Quantity:</label>
+                <input type="number" id="bananaQty" value="1" min="1">
+            </div>
+            <button onclick="addToCart('Banana', 40, document.getElementById('bananaQty').value)">Add to Cart</button>
+        </article>
+
+        <article class="item">
+            <img src="ALL_ITEMS.jpg" alt="A bowl of mixed dry fruits" height="200"> 
+            <h2>Dryfruits</h2>
+            <p>Rs.300</p>
+            <div class="quantity">
+                <label for="dryfruitsQty">Quantity:</label>
+                <input type="number" id="dryfruitsQty" value="1" min="1">
+            </div>
+            <button onclick="addToCart('Dryfruits', 300, document.getElementById('dryfruitsQty').value)">Add to Cart</button>
+        </article>
+
+        <article class="item">
+            <img src="cookies.jpg" alt="A packet of assorted biscuits" height="200"> 
+            <h2>Biscuits</h2>
+            <p>Rs.100</p>
+            <div class="quantity">
+                <label for="biscuitsQty">Quantity:</label>
+                <input type="number" id="biscuitsQty" value="1" min="1">
+            </div>
+            <button onclick="addToCart('Biscuits', 100, document.getElementById('biscuitsQty').value)">Add to Cart</button>
+        </article>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: Rs.<span id="total-price">0.00</span></p>
+            <button onclick="checkout()">Proceed to Booking</button>
+            <button onclick="closeCart()">Close</button>
+        </div>
+    </div>
+
+    <script src="script1.js"></script> 
+</body>
+</html>
